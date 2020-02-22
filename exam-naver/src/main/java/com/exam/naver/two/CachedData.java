@@ -1,7 +1,5 @@
 package com.exam.naver.two;
 
-import org.springframework.beans.factory.parsing.FailFastProblemReporter;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;

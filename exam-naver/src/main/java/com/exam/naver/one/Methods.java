@@ -22,8 +22,7 @@ public class Methods {
     private Condition conditionG = lock.newCondition();
     private Condition conditionH = lock.newCondition();
 
-    //Test output: Task H, Task B, Task G, Task C, Task E, Task A, Task D, Task F
-    public void methodA() {
+    void methodA() {
         lock.lock();
 
         try {
@@ -32,7 +31,7 @@ public class Methods {
                 conditionA.await();
             }
             //打印
-            System.out.println(Thread.currentThread().getName());
+            System.out.print(Thread.currentThread().getName() + "\t");
             //唤醒
             number = 7;
             conditionD.signal();
@@ -44,7 +43,7 @@ public class Methods {
         }
     }
 
-    public void methodB() {
+    void methodB() {
         lock.lock();
 
         try {
@@ -53,7 +52,7 @@ public class Methods {
                 conditionB.await();
             }
             //打印
-            System.out.println(Thread.currentThread().getName());
+            System.out.print(Thread.currentThread().getName() + "\t");
 
             //唤醒
             number = 3;
@@ -66,7 +65,7 @@ public class Methods {
         }
     }
 
-    public void methodC() {
+    void methodC() {
         lock.lock();
 
         try {
@@ -75,7 +74,7 @@ public class Methods {
                 conditionC.await();
             }
             //打印
-            System.out.println(Thread.currentThread().getName());
+            System.out.print(Thread.currentThread().getName() + "\t");
             //唤醒
             number = 5;
             conditionE.signal();
@@ -87,7 +86,7 @@ public class Methods {
         }
     }
 
-    public void methodD() {
+    void methodD() {
         lock.lock();
 
         try {
@@ -96,7 +95,7 @@ public class Methods {
                 conditionD.await();
             }
             //打印
-            System.out.println(Thread.currentThread().getName());
+            System.out.print(Thread.currentThread().getName() + "\t");
             //唤醒
             number = 8;
             conditionF.signal();
@@ -108,7 +107,7 @@ public class Methods {
         }
     }
 
-    public void methodE() {
+    void methodE() {
         lock.lock();
 
         try {
@@ -117,7 +116,7 @@ public class Methods {
                 conditionE.await();
             }
             //打印
-            System.out.println(Thread.currentThread().getName());
+            System.out.print(Thread.currentThread().getName() + "\t");
             //唤醒
             number = 6;
             conditionA.signal();
@@ -129,7 +128,7 @@ public class Methods {
         }
     }
 
-    public void methodF() {
+    void methodF() {
         lock.lock();
 
         try {
@@ -138,7 +137,7 @@ public class Methods {
                 conditionF.await();
             }
             //打印
-            System.out.println(Thread.currentThread().getName());
+            System.out.print(Thread.currentThread().getName() + "\t");
             //唤醒
             number = 1;
             conditionH.signal();
@@ -150,7 +149,7 @@ public class Methods {
         }
     }
 
-    public void methodG() {
+    void methodG() {
         lock.lock();
 
         try {
@@ -159,7 +158,7 @@ public class Methods {
                 conditionG.await();
             }
             //打印
-            System.out.println(Thread.currentThread().getName());
+            System.out.print(Thread.currentThread().getName() + "\t");
 
             //唤醒
             number = 4;
@@ -172,7 +171,7 @@ public class Methods {
         }
     }
 
-    public void methodH() {
+    void methodH() {
         lock.lock();
 
         try {
@@ -181,7 +180,7 @@ public class Methods {
                 conditionH.await();
             }
             //打印
-            System.out.println(Thread.currentThread().getName());
+            System.out.print(Thread.currentThread().getName() + "\t");
             //唤醒
             number = 2;
             conditionB.signal();
