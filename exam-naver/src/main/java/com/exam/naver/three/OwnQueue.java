@@ -42,7 +42,7 @@ public class OwnQueue {
     }
 
     public int pop() {
-        return arr[rear];
+        return arr[rear--];
     }
 
     public Object peek() {
