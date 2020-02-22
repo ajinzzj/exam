@@ -42,7 +42,7 @@ public class OwnQueue {
     }
 
     public int pop() {
-        return arr[rear--];
+        return arr[size- rear-- -1];
     }
 
     public Object peek() {
@@ -51,5 +51,15 @@ public class OwnQueue {
         } else {
             return arr[0];
         }
+    }
+
+    public static void main(String[] args) {
+        OwnQueue ownQueue = new OwnQueue(3);
+        ownQueue.push(1);
+        ownQueue.push(2);
+        ownQueue.push(3);
+        System.out.println(ownQueue.pop());
+        System.out.println(ownQueue.pop());
+        System.out.println(ownQueue.pop());
     }
 }
