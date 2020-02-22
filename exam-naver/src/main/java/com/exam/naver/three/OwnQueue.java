@@ -42,6 +42,9 @@ public class OwnQueue {
     }
 
     public int pop() {
+        if(isEmpty()){
+            throw new RuntimeException("队列已经没有数据了");
+        }
         return arr[size- rear-- -1];
     }
 
