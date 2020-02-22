@@ -44,4 +44,12 @@ public class OwnQueue {
     public int pop() {
         return arr[rear];
     }
+
+    public Object peek() {
+        if (rear == -1) {
+            return null;
+        } else {
+            return arr[0];
+        }
+    }
 }
