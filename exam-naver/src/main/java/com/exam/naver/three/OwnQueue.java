@@ -45,7 +45,7 @@ public class OwnQueue {
         if(isEmpty()){
             throw new RuntimeException("队列已经没有数据了");
         }
-        return arr[size- rear-- -1];
+        return arr[rear--];
     }
 
     public Object peek() {
@@ -57,7 +57,7 @@ public class OwnQueue {
     }
 
     public static void main(String[] args) {
-        OwnQueue ownQueue = new OwnQueue(3);
+        OwnQueue ownQueue = new OwnQueue(5);
         ownQueue.push(1);
         ownQueue.push(2);
         ownQueue.push(3);
